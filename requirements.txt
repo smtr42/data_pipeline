@@ -13,7 +13,6 @@ networkx==2.5.1
 numpy==1.21.0
 pathspec==0.8.1
 Pillow==8.2.0
-pkg-resources==0.0.0
 pycodestyle==2.7.0
 pyflakes==2.3.1
 pyparsing==2.4.7

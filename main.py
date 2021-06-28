@@ -7,9 +7,7 @@ def main():
     path = Path.joinpath(Path(__file__).parent.absolute(), "images")
     load_image = LoadImage(path)
     transform = Transform()
-
     pipeline = load_image | transform
-
     try:
         for image in pipeline:
             print(image)
