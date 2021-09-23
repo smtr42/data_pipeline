@@ -9,6 +9,6 @@ class Transform(Pipeline):
 
     def alter(self, image):
         """Overwrite to map the pipeline data."""
-        # for the demo, fake reshaping
-        reshaped_image = image
-        return reshaped_image
+        # for the demo, fake reshaping §
+        image.resized = image.original_array
+        return image
