@@ -1,5 +1,5 @@
-class Pipeline(object):
-    """Common pipeline class fo all pipeline tasks."""
+class Pipeline:
+    """Pipeline class for all pipeline tasks."""
 
     def __init__(self, source=None):
         self.source = source
@@ -18,18 +18,18 @@ class Pipeline(object):
                 return
 
     def __or__(self, other):
-        """Allows to connect the pipaceline task using | operator."""
+        """Allows to connect the multiple tasks using the | operator."""
         if other is None:
             return self
         other.source = self._generator()
         return other
 
     def is_valid(self, image):
-        """Overwrite to is_valid out the pipeline data."""
+        """Overwrite to filter data under conditions."""
         return True
 
     def alter(self, image):
-        """Overwrite to apply modificatons to the pipeline data."""
+        """Overwrite to apply modifications to the Image object."""
         return image
 
     def has_next(self):
