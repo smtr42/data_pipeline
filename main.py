@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 def main():
+    """Instanciate tasks and chain them to process images."""
     path = Path.joinpath(Path(__file__).parent.absolute(), "images")
     load_image = LoadImage(path)
     transform = Transform()
